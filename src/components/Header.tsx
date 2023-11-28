@@ -1,4 +1,4 @@
-import { UserButton, useUser, SignedIn, SignedOut } from "@clerk/nextjs";
+import { UserButton, SignedIn, SignedOut } from "@clerk/nextjs";
 
 import { Menu } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -10,7 +10,6 @@ import {
     SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet"
-import { Sign } from "crypto";
 
 const navigation = [
     { name: 'Product', href: '#' },
@@ -20,8 +19,6 @@ const navigation = [
 ]
 
 const Header = () => {
-
-    const { isLoaded, isSignedIn } = useUser();
 
     return (
         <header className="bg-white">
